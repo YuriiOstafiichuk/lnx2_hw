@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "header.h"
+
+int main()
+{
+
+	/*adding varaibles for math*/
+	int a;
+	int b;
+	int c;
+	int d;
+	int e;
+	int f;
+	int g;
+	int h;
+	int i;
+	double: j;
+
+	printf("enter first number to calculate summ: ");
+	scanf("%i", &a);
+	printf("enter second number to calculate summ: ");
+	scanf("%i", &b);
+	printf("%d + %d = %ld/n", a, b, add(a,b));
+
+	printf("enter first number to calculate diff: ");
+	scanf("%i", &c);
+	printf("enter second number to calculate diff: ");
+	scanf("%i", &d);
+	printf("%d - %d = %ld/n", c, d, diff(c,d));
+
+	printf("enter first number to calculate production: ");
+	scanf("%i", &e);
+	printf("enter second number to calculate production: ");
+	scanf("%i", &f);
+	printf("%d * %d = %ld/n", e, f, diff(e,f));
+
+	printf("enter first number to calculate fraction: ");
+	scanf("%i", &g);
+	printf("enter second number to calculate fraction: ");
+	scanf("%i", &h);
+	printf("%d / %d = %ld/n", g, h, diff(g,h));
+
+	printf("Enter the number to calculate the factorial: ");
+	scanf("%i", &i);
+	printf("fact(%d)= %lu\n",i, fact(i));
+
+	printf("Enter the number to calculate the square root: ");
+	scanf("%i", &j);
+	printf("square root of (%d) = %lu\n",j, sqroot(j));
+
+  return 0;
+}
