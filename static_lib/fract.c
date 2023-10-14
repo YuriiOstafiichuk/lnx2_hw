@@ -1,6 +1,6 @@
 #include "header.h"
 
-long int fract(long int a, long int b)
+double fract(double a, double b)
 {
         return a / b;
 }

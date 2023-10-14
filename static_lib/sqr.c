@@ -1,7 +1,7 @@
 #include "header.h"
 #include "math.h"
 
-long int sqroot(long int a)
+double sqroot(double a)
 {
-        return double sqrt(double a);
+  return sqrt(a);
 }

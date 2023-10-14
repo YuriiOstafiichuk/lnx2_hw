@@ -12,42 +12,42 @@ int main()
 	int d;
 	int e;
 	int f;
-	int g;
-	int h;
+	double g;
+	double h;
 	int i;
-	double: j;
+	double j;
 
 	printf("enter first number to calculate summ: ");
 	scanf("%i", &a);
 	printf("enter second number to calculate summ: ");
 	scanf("%i", &b);
-	printf("%d + %d = %ld/n", a, b, add(a,b));
+	printf("%d + %d = %ld\n", a, b, add(a,b));
 
 	printf("enter first number to calculate diff: ");
 	scanf("%i", &c);
 	printf("enter second number to calculate diff: ");
 	scanf("%i", &d);
-	printf("%d - %d = %ld/n", c, d, diff(c,d));
+	printf("%d - %d = %ld\n", c, d, diff(c,d));
 
 	printf("enter first number to calculate production: ");
 	scanf("%i", &e);
 	printf("enter second number to calculate production: ");
 	scanf("%i", &f);
-	printf("%d * %d = %ld/n", e, f, diff(e,f));
+	printf("%d * %d = %ld\n", e, f, prod(e,f));
 
 	printf("enter first number to calculate fraction: ");
-	scanf("%i", &g);
+	scanf("%lf", &g);
 	printf("enter second number to calculate fraction: ");
-	scanf("%i", &h);
-	printf("%d / %d = %ld/n", g, h, diff(g,h));
+	scanf("%lf", &h);
+	printf("%f / %f = %f\n", g, h, fract(g,h));
 
 	printf("Enter the number to calculate the factorial: ");
 	scanf("%i", &i);
 	printf("fact(%d)= %lu\n",i, fact(i));
 
 	printf("Enter the number to calculate the square root: ");
-	scanf("%i", &j);
-	printf("square root of (%d) = %lu\n",j, sqroot(j));
+	scanf("%lf", &j);
+	printf("square root of (%f) = %f\n",j, sqroot(j));
 
   return 0;
 }
