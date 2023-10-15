@@ -2,52 +2,82 @@
 #include <stdlib.h>
 #include "header.h"
 
-int main()
-{
+int main() {
+    int choice;
+    
+    while (1) {
+        printf("Choose an operation:\n");
+        printf("1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Multiplication\n");
+        printf("4. Division\n");
+        printf("5. Factorial\n");
+        printf("6. Square Root\n");
+        printf("7. Exit\n");
+        printf("Enter your choice: ");
+        
+        scanf("%d", &choice);
 
-	/*adding varaibles for math*/
-	int a;
-	int b;
-	int c;
-	int d;
-	int e;
-	int f;
-	double g;
-	double h;
-	int i;
-	double j;
+        if (choice == 7) {
+            break; // Exit the loop
+        }
 
-	printf("enter first number to calculate summ: ");
-	scanf("%i", &a);
-	printf("enter second number to calculate summ: ");
-	scanf("%i", &b);
-	printf("%d + %d = %ld\n", a, b, add(a,b));
+        switch (choice) {
+            case 1: // Addition
+                int a, b;
+                printf("Enter the first number: ");
+                scanf("%d", &a);
+                printf("Enter the second number: ");
+                scanf("%d", &b);
+                printf("%d + %d = %ld\n", a, b, add(a, b));
+                break;
 
-	printf("enter first number to calculate diff: ");
-	scanf("%i", &c);
-	printf("enter second number to calculate diff: ");
-	scanf("%i", &d);
-	printf("%d - %d = %ld\n", c, d, diff(c,d));
+            case 2: // Subtraction
+                int c, d;
+                printf("Enter the first number: ");
+                scanf("%d", &c);
+                printf("Enter the second number: ");
+                scanf("%d", &d);
+                printf("%d - %d = %ld\n", c, d, diff(c, d));
+                break;
 
-	printf("enter first number to calculate production: ");
-	scanf("%i", &e);
-	printf("enter second number to calculate production: ");
-	scanf("%i", &f);
-	printf("%d * %d = %ld\n", e, f, prod(e,f));
+            case 3: // Multiplication
+                int e, f;
+                printf("Enter the first number: ");
+                scanf("%d", &e);
+                printf("Enter the second number: ");
+                scanf("%d", &f);
+                printf("%d * %d = %ld\n", e, f, prod(e, f));
+                break;
 
-	printf("enter first number to calculate fraction: ");
-	scanf("%lf", &g);
-	printf("enter second number to calculate fraction: ");
-	scanf("%lf", &h);
-	printf("%f / %f = %f\n", g, h, fract(g,h));
+            case 4: // Division
+                double g, h;
+                printf("Enter the first number: ");
+                scanf("%lf", &g);
+                printf("Enter the second number: ");
+                scanf("%lf", &h);
+                printf("%f / %f = %f\n", g, h, fract(g, h));
+                break;
 
-	printf("Enter the number to calculate the factorial: ");
-	scanf("%i", &i);
-	printf("fact(%d)= %lu\n",i, fact(i));
+            case 5: // Factorial
+                int i;
+                printf("Enter the number to calculate the factorial: ");
+                scanf("%i", &i);
+                printf("fact(%d) = %lu\n", i, fact(i));
+                break;
 
-	printf("Enter the number to calculate the square root: ");
-	scanf("%lf", &j);
-	printf("square root of (%f) = %f\n",j, sqroot(j));
+            case 6: // Square Root
+                double j;
+                printf("Enter the number to calculate the square root: ");
+                scanf("%lf", &j);
+                printf("Square root of (%f) = %f\n", j, sqroot(j));
+                break;
 
-  return 0;
+            default:
+                printf("Invalid choice. Please enter a valid option.\n");
+        }
+    }
+
+    return 0;
 }
+
